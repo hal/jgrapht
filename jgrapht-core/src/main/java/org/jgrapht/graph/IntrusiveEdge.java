@@ -36,7 +36,7 @@
  */
 package org.jgrapht.graph;
 
-import java.io.*;
+import java.io.Serializable;
 
 
 /**
@@ -54,26 +54,10 @@ class IntrusiveEdge
 
     private static final long serialVersionUID = 3258408452177932855L;
 
-    
-
     Object source;
 
     Object target;
 
-    
-
-    /**
-     * @see Object#clone()
-     */
-    public Object clone()
-    {
-        try {
-            return super.clone();
-        } catch (CloneNotSupportedException e) {
-            // shouldn't happen as we are Cloneable
-            throw new InternalError();
-        }
-    }
 }
 
 // End IntrusiveEdge.java
