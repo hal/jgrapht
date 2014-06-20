@@ -54,9 +54,9 @@ class IntrusiveEdge
 
     private static final long serialVersionUID = 3258408452177932855L;
 
-    Object source;
+    protected Object source;
 
-    Object target;
+    protected Object target;
 
 }
 

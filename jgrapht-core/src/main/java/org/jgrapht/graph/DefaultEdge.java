@@ -51,11 +51,17 @@ import org.jgrapht.*;
 public class DefaultEdge
     extends IntrusiveEdge
 {
-    
 
     private static final long serialVersionUID = 3258408452177932855L;
 
-    
+    public DefaultEdge() {
+    }
+
+    public DefaultEdge(Object s, Object t)
+    {
+        source = s;
+        target = t;
+    }
 
     /**
      * Retrieves the source of this edge. This is protected, for use by
