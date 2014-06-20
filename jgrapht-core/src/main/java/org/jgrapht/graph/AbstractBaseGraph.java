@@ -44,12 +44,23 @@
  */
 package org.jgrapht.graph;
 
-import java.io.*;
+import org.jgrapht.DirectedGraph;
+import org.jgrapht.EdgeFactory;
+import org.jgrapht.Graph;
+import org.jgrapht.Graphs;
+import org.jgrapht.UndirectedGraph;
+import org.jgrapht.WeightedGraph;
+import org.jgrapht.util.ArrayUnenforcedSet;
+import org.jgrapht.util.TypeUtil;
 
-import java.util.*;
-
-import org.jgrapht.*;
-import org.jgrapht.util.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Set;
 
 
 /**
@@ -325,7 +336,7 @@ public abstract class AbstractBaseGraph<V, E>
      */
     public Object clone()
     {
-        try {
+        /*try {
             TypeUtil<AbstractBaseGraph<V, E>> typeDecl = null;
 
             AbstractBaseGraph<V, E> newGraph =
@@ -345,10 +356,12 @@ public abstract class AbstractBaseGraph<V, E>
             Graphs.addGraph(newGraph, this);
 
             return newGraph;
-        } catch (CloneNotSupportedException e) {
+        } catch (Throwable e) {
             e.printStackTrace();
             throw new RuntimeException();
-        }
+        } */
+
+        throw new RuntimeException("Clone is not supported");
     }
 
     /**

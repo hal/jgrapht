@@ -42,11 +42,18 @@
  */
 package org.jgrapht.graph;
 
-import java.util.*;
+import org.jgrapht.Graph;
+import org.jgrapht.ListenableGraph;
+import org.jgrapht.event.GraphEdgeChangeEvent;
+import org.jgrapht.event.GraphListener;
+import org.jgrapht.event.GraphVertexChangeEvent;
+import org.jgrapht.event.VertexSetListener;
+import org.jgrapht.util.TypeUtil;
 
-import org.jgrapht.*;
-import org.jgrapht.event.*;
-import org.jgrapht.util.*;
+import java.util.ArrayList;
+import java.util.EventListener;
+import java.util.List;
+import java.util.Set;
 
 
 /**
@@ -226,7 +233,7 @@ public class DefaultListenableGraph<V, E>
             g.vertexSetListeners = new ArrayList<VertexSetListener<V>>();
 
             return g;
-        } catch (CloneNotSupportedException e) {
+        } catch (Throwable e) {
             // should never get here since we're Cloneable
             e.printStackTrace();
             throw new RuntimeException("internal error");
