@@ -37,10 +37,18 @@
  */
 package org.jgrapht.alg;
 
-import java.util.*;
+import org.jgrapht.DirectedGraph;
+import org.jgrapht.graph.DirectedSubgraph;
+import org.jgrapht.graph.EdgeReversedGraph;
 
-import org.jgrapht.*;
-import org.jgrapht.graph.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Stack;
+import java.util.Vector;
 
 
 /**
@@ -234,11 +242,11 @@ public class StrongConnectivityInspector<V, E>
         VertexData<V> vertexData,
         Set<V> vertices)
     {
-        Deque<VertexData<V>> stack = new ArrayDeque<VertexData<V>>();
+        Stack<VertexData<V>> stack = new Stack<VertexData<V>>();
         stack.add(vertexData);
 
         while (!stack.isEmpty()) {
-            VertexData<V> data = stack.removeLast();
+            VertexData<V> data = stack.pop();
 
             if (!data.isDiscovered()) {
                 data.setDiscovered(true);
