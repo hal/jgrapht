@@ -34,11 +34,17 @@
  */
 package org.jgrapht.alg;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Queue;
+import java.util.Set;
 
-import org.jgrapht.*;
-import org.jgrapht.alg.interfaces.*;
-import org.jgrapht.util.*;
+import org.jgrapht.UndirectedGraph;
+import org.jgrapht.alg.interfaces.MatchingAlgorithm;
+import org.jgrapht.util.ArrayDeque;
+import org.jgrapht.util.ArrayUnenforcedSet;
 
 
 /**
