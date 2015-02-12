@@ -75,10 +75,12 @@ public class ClassBasedEdgeFactory<V, E>
     /**
      * @see EdgeFactory#createEdge(Object, Object)
      */
+    @SuppressWarnings("unchecked")
     public E createEdge(V source, V target)
     {
         try {
-            return edgeClass.newInstance();
+            return (E) new DefaultEdge(source, target);
+            // does not work in GWT: return edgeClass.newInstance();
         } catch (Exception ex) {
             throw new RuntimeException("Edge factory failed", ex);
         }
