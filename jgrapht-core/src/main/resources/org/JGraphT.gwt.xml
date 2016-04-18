@@ -21,5 +21,21 @@
   ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
 <module>
-    <source path="jgrapht"/>
+    <source path="jgrapht">
+        <exclude name="**/GraphReader.java" />
+        <exclude name="**/GreedyColoring.java" />
+        <exclude name="**/PatonCycleBase.java" />
+        <exclude name="**/ClassBasedVertexFactory.java" />
+        <exclude name="**/DefaultListenableGraph.java" />
+        <exclude name="**/DirectedAcyclicGraph.java" />
+        <exclude name="**/BrownBacktrackColoring.java" />
+        <exclude name="**/SzwarcfiterLauerSimpleCycles.java" />
+        <exclude name="**/JohnsonSimpleCycles.java" />
+        <exclude name="**/RandomGraphGenerator.java" />
+        <exclude name="**/TarjanSimpleCycles.java" />
+        <exclude name="**/ListenableDirectedGraph.java" />
+        <exclude name="**/ListenableUndirectedGraph.java" />
+        <exclude name="**/ListenableDirectedWeightedGraph.java" />
+        <exclude name="**/ListenableUndirectedWeightedGraph.java" />
+    </source>
 </module>
